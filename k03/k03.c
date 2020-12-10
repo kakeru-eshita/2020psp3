@@ -39,7 +39,7 @@ return NULL;
 char* BMSearch(char text[], char key[])
 {
 //  ここを実装する
-int key_len,index,start,i,pos,text_len;
+int key_len,index,start,i,pos,text_len,h;
 int table[256];
     
 key_len=strlen(key);
@@ -66,8 +66,12 @@ while(1){
         pos--;
     }
     else{
+    h=index;
     index=index+table[text[index]];
     pos=key_len;
+        if(index<h){
+            index=h+1;
+        }
     }
     if(index>text_len){
         break;
