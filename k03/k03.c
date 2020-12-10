@@ -69,7 +69,7 @@ while(1){
     h=index;
     index=index+table[text[index]];
     pos=key_len;
-        if(index<h){
+        if(index<=h){
             index=h+1;
         }
     }
