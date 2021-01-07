@@ -108,7 +108,7 @@ void QuickSort(City arrayCity[], int left, int right)
     //  ここを実装する
     int i,j,pivot;
     City y,z;
-    if(right-left>1)
+    if(right-left>0)
     {
       i=left;
       j=right;
@@ -117,7 +117,7 @@ void QuickSort(City arrayCity[], int left, int right)
       {
           while(i<=right)
           {
-            if(arrayCity[i].seafood >= arrayCity[pivot].seafood)
+            if(arrayCity[i].seafood > arrayCity[pivot].seafood)
             {
               break;
             }
