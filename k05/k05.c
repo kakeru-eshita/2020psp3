@@ -122,7 +122,7 @@ void DepthFirstSearch(int size, int matrix[size][size], int start)
         {
             visited[val]=1;
             PrintStationName(val);
-            for (i=0;i<=size;i++)
+            for (i=0;i<size;i++)
             {
                 if(matrix[val][i]!=0)
                 {
@@ -212,7 +212,7 @@ void BreadthFirstSearch(int size, int matrix[size][size], int start)
         {
             visited[val]=1;
             PrintStationName(val);
-            for (i=0;i<=size;i++)
+            for (i=0;i<size;i++)
             {
                 if(matrix[val][i]!=0)
                 {
